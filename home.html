@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<title>
+SEED Sustainable
+</title>
+
+<style>
+/*------Header -------------------------------------------------------*/
+header {
+	padding-top: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-bottom: 5%;
+}
+
+#main.container-fluid{
+	padding: 0px;
+	margin: 0px;
+}
+
+#body {
+	clear: both;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+#bg {
+	padding-top: 50px;
+	background-color: Ivory;	
+}
+
+
+
+/*------ Menu -------------------------------------------------------- */
+.navbar-default {
+     background-color: white;
+     background-image: none;
+     background-repeat: none;
+     border-color: white;
+
+}
+
+.dropdown-menu {
+    border-color: white;
+    box-shadow: none;
+}
+
+.navbar-default .navbar-nav > .active > a
+{
+    color: lightgreen;
+    background: white;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+    color: lightgreen;
+    background: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: white;
+    color: lightgreen;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: white;
+    color: lightgreen;
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+	background:white!important; 
+	color:lightgreen !important;
+}
+
+.navbar-toggle {
+	background-color: white;	
+}
+
+#bar {
+    border-right-style: solid;
+    border-right-width: 1px; 
+}
+
+#logotop {
+	display: inline-block;	
+	float: left;
+	margin-right: 10px;
+}
+
+#titletop {
+	display: inline-block;
+	clear: both;
+		
+}
+
+#myNavbar {
+	padding-top: 50px;	
+}
+
+.navbar-header button {
+	margin-top: 60px;	
+}
+
+/*---------- Tabs --------------------------------------------------------*/
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/ 
+}
+/* Float the list items side by side */
+ul.tab li {
+    float: left;
+}
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: 'Enriqueta', serif;
+    color: gray;
+}
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    color: lightgreen;
+}
+/* Create an active/current tablink class */
+ul.tab li .active, a:focus {
+    color: lightgreen;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}    
+    
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*---------- Homepage ------------------------------------------------------*/
+#homepage {
+	position: relative;
+	display: inline;
+}
+
+#homepage img {
+	width: 100%;
+	max-width: 920px;
+	display: block;
+    margin: 0 auto;
+}
+
+#c1 {
+	position: absolute;
+    background: YellowGreen;
+    color: white;
+    bottom: 50px;
+}
+    
+#c1:hover {
+    background-color: darkgreen;
+}
+    
+#c1 a {
+    text-decoration: none;
+    color: white;
+}
+
+#c2 {
+    position: absolute;
+    background: YellowGreen;
+    color: white;
+    bottom: 50px;
+    left: 33%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    transition: 0.3s;
+    font-size: 25px;
+}
+    
+#c2:hover {
+    background-color: darkgreen;
+}
+    
+#c3 {
+    position: absolute;
+    background: YellowGreen;
+    color: white;
+    bottom: 50px;
+    left: 52%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    transition: 0.3s;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+    
+#c3:hover {
+    background-color: darkgreen;
+}
+    
+#c4 {
+    position: absolute;
+    background: YellowGreen;
+    color: white;
+    bottom: 50px;
+    left: 70%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    transition: 0.3s;
+    font-size: 25px;
+}
+    
+#c4:hover {
+    background-color: darkgreen;
+}
+
+
+
+
+
+
+/*--------- Media Queries --------------------------------------------------*/
+/* Screen 768px or smaller (Mobile) */
+@media (max-width: 768px)
+{
+	#logotop {
+		clear: both;	
+		display: none;
+	}
+	
+	header {
+		padding-top: 1%;
+		margin-left: 1%;
+		margin-right: 1%;
+		padding-bottom: 5%;
+	}
+
+	#bar {
+   	 	border-right-style: none;
+    	border-right-width: 0px; 
+	}
+	
+	#c1 {
+	  position: static;
+	  display: block;
+	  background: YellowGreen;
+	  color: white;
+	  left: 50px;
+	  top: 50px;
+	  transition: 0.3s;
+	  font-size: 25px;
+	}
+  /*  
+  #c2 {
+	  position: static;
+	  display: block;
+	  background: YellowGreen;
+	  color: white;
+	  transition: 0.3s;
+	  font-size: 25px;
+  }
+    
+  #c3 {
+	  position: static;
+	  display: block;
+	  background: YellowGreen;
+	  color: white;
+	  transition: 0.3s;
+	  font-size: 25px;
+  }
+	  
+  #c4 {
+	  position: static;
+	  display: block;
+	  background: YellowGreen;
+	  color: white;
+	  transition: 0.3s;
+	  font-size: 25px;
+  } */
+}
+
+/* Screen 956px or smaller */
+@media (max-width: 956px)
+{
+	header {
+		padding-top: 1%;
+		margin-left: 0%;
+		margin-right: 0%;
+		padding-bottom: 5%;
+	}
+	
+	#body {
+		clear: both;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+}
+
+
+
+/* Screen 768px or larger */
+@media (min-width: 768px) 
+{
+    ul.nav li.dropdown:hover > ul.dropdown-menu 
+    {
+       display: block;
+    }
+}
+
+
+
+
+
+</style>
+
+<script>
+function opentab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}    
+  
+
+</script>
+
+
+</head>
+
+<body>
+<div class="container-fluid" id="main">
+
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> 
+        <img id="logotop" src="./logo.jpg" alt="logo">
+        <div id="titletop"> 
+      		<h3> Seed Sustainable </h3>
+      		<p id="slogan"> Sustainable Investments &amp; Finance </p> 
+        </div>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="bar"><a href="#" class="tablinks active" onclick="opentab(event, 'Home')">Home</a></li>
+        <li id="bar"><a href="#" class="tablinks" onclick="opentab(event, 'About')">About</a></li>
+        <li id="bar" class="dropdown">
+          <a class="dropdown-toggle tablinks" data-toggle="dropdown" href="#" onclick="opentab(event, 'Work')"> Work <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           	<li><a href="#" class="tablinks" id="dpcss" onclick="opentab(event, 'IR')">Investment Research</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Business Development</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="tablinks" onclick="opentab(event, 'Contact')">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header> <!-- end header ------------------------------------------------------------------>
+
+<section id="bg">
+<section id="body">
+<div id="Home" class="tabcontent" style="display: block">
+
+<div id="homepage">
+	<div id="c1"><a href="#" class="tablinks" onclick="opentab(event, 'IR')">Research </a></div>
+</div>
+
+</div> <!-- end Home tab -->
+
+<div id="About" class="tabcontent">
+<h1>ABOUT</h1>
+<div id="c2"> Strategies </div>
+    <div id="c3"> Solutions </div>
+    <div id="c4"> Education </div>
+
+
+
+
+</div> <!-- end About tab -->
+
+<div id="Work" class="tabcontent">
+<h1>Work</h1>
+
+
+
+
+
+</div> <!-- end Work tab -->
+
+<div id="IR" class="tabcontent">
+<h1>RESEARCH IN FOCUS:</h1>
+
+
+
+</div> <!-- end Investment Research tab -->
+
+
+
+<div id="Contact" class="tabcontent">
+<h1>Contact</h1>
+
+
+
+
+</div> <!-- end Contact tab -->
+
+</section>  <!-- end id=body -------------------------------------------------------------->
+</section>
+
+<footer>
+
+
+
+</footer>
+
+</div> <!-- end fluid id=main div --------------------------------------------------------->
+</body>
+
+</html>
+
+
+
+
+
+
