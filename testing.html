@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+    
+<title>
+SEED Sustainable
+</title>
+
+<style>
+
+
+/*------ Menu -------------------------------------------------------- */
+.navbar-default {
+     background-color: white;
+     background-image: none;
+     background-repeat: none;
+     border-color: white;
+}
+.dropdown-menu {
+    border-color: white;
+    box-shadow: none;
+}
+.navbar-default .navbar-nav > .active > a
+{
+    color: lightgreen;
+    background: white;
+}
+.navbar-default .navbar-nav > li > a {
+    background: white;
+}
+.navbar-default .navbar-nav > .active > a:hover {
+    color: lightgreen;
+    background: white;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: white;
+    color: lightgreen;
+}
+.dropdown-menu > li > a:hover {
+    background-color: white;
+    color: lightgreen;
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+	background:white!important; 
+	color:lightgreen !important;
+}
+.navbar-toggle {
+	background-color: white;	
+}
+#bar {
+    border-right-style: solid;
+    border-right-width: 1px; 
+}
+#logotop {
+	display: inline-block;	
+	float: left;
+	margin-right: 10px;
+}
+#titletop {
+	display: inline-block;
+	clear: both;
+		
+}
+#myNavbar {
+	padding-top: 50px;	
+}
+.navbar-header button {
+	margin-top: 60px;	
+}
+/*---------- Tabs --------------------------------------------------------*/
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/ 
+}
+/* Float the list items side by side */
+ul.tab li {
+    float: left;
+}
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: 'Enriqueta', serif;
+    color: gray;
+}
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    color: lightgreen;
+}
+/* Create an active/current tablink class */
+ul.tab li .active, a:focus {
+    color: lightgreen;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}    
+    
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+/*--------- Investment Research Page --------------------------------------------------*/  
+ #slidepic {
+    max-width: 1000px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+    
+#boxover {
+    position:absolute;
+    width: 40%;
+    left: 35%; 
+    top: 35%;
+    text-align: center;
+    padding: 10px;
+    background-color: yellowgreen;
+    color: white;
+}
+
+#moveleft {
+    margin-left: 50%;
+}
+
+#length2 {
+    width: 60px;
+}
+    
+    
+    
+    
+    
+/*--------- Media Queries --------------------------------------------------*/
+/* Screen 768px or smaller (Mobile) */
+@media (max-width: 768px)
+{
+	#logotop {
+		clear: both;	
+		display: none;
+	}
+	
+	header {
+		padding-top: 1%;
+		margin-left: 1%;
+		margin-right: 1%;
+		padding-bottom: 5%;
+	}
+	#bar {
+   	 	border-right-style: none;
+    	border-right-width: 0px; 
+	}
+    
+    #myNavbar {
+	   padding-top: 0px;	
+    }
+	
+	#c1 {
+        position: static;
+        display: block;
+        background: YellowGreen;
+        color: white;
+        transition: 0.3s;
+        font-size: 25px;
+        width: 100%;
+        padding: 10px;
+        padding-right: 30px;
+        text-align: right;
+	}
+  
+  #c2 {
+	  position: static;
+	  display: block;
+	  background: YellowGreen;
+	  color: white;
+	  transition: 0.3s;
+	  font-size: 25px;
+      width: 100%;
+      padding: 10px;
+      padding-right: 30px;
+      text-align: right;
+  }
+
+  #c3 {
+	  position: static;
+	  display: block;
+	  background: YellowGreen;
+	  color: white;
+	  transition: 0.3s;
+	  font-size: 25px;
+      width: 100%;
+      padding: 10px;
+      padding-right: 30px;
+      text-align: right;
+  }
+	  
+  #c4 {
+	  position: static;
+	  display: block;
+	  background: YellowGreen;
+	  color: white;
+	  transition: 0.3s;
+	  font-size: 25px;
+      width: 100%;
+      padding: 10px;
+      padding-right: 30px;
+      text-align: right;
+      
+  } 
+
+   .tabcontent {
+        display: none;
+        padding: 0px 0px;
+    }    
+    
+    #homepage2 {
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+     #star1 {
+        float: right;
+        display: inline-block;
+    }
+    
+    #welcome {
+        float: left;
+    }
+    
+    #clear {
+        clear:both;
+    }
+    
+    #star2 {
+        display: none;
+    }
+    
+    #desc {
+        margin-left: 0%;
+    }
+    
+    /* Footer */
+    footer {
+        text-align: center;
+        margin-left: 5%;
+	    margin-right: 5%;
+    }
+    
+    #f1contain, #f2b {
+        text-align: left;
+    }
+    
+    #f2a {
+        display: none;
+    }
+    #f2b {
+        display: block;
+    }
+    
+    #f3a {
+        display: none;
+    }
+    #f3b {
+        text-align: right;
+        display: block;
+    }
+    #media {
+        display: none;
+    }
+    
+    /* About */
+    #About {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #aboutinfo1, #aboutinfo2 {
+        margin-left: 0%;
+    }
+    
+}
+    
+/* Screen 956px or smaller */
+@media (max-width: 956px)
+{
+	header {
+		padding-top: 1%;
+		margin-left: 0%;
+		margin-right: 0%;
+		padding-bottom: 5%;
+	}
+	
+	#body {
+		clear: both;
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+    
+    footer {
+        text-align: center;
+        margin-left: 5%;
+	    margin-right: 5%;
+    }
+    
+    #About {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    #p1, #p2, #p3 {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+    }
+
+}
+/* Screen 1350px or smaller */
+@media (max-width: 1350px)
+{
+     #aboutinfo2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+/* Screen 768px or larger */
+@media (min-width: 768px) 
+{
+    ul.nav li.dropdown:hover > ul.dropdown-menu 
+    {
+       display: block;
+    }
+}
+
+</style>
+    
+
+
+<script>
+// Open tab links
+function opentab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}    
+
+function initialize() {
+    var myCenter = new google.maps.LatLng(43.647814,-79.39461110000002);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+ var infowindow = new google.maps.InfoWindow({
+    content: "SEED SUSTAINABLE"
+  });
+  infowindow.open(map,marker);
+    
+    google.maps.event.addDomListener(window, "resize", function() {
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(myCenter);   
+});
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+function toggle() {
+    initialize();
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(myCenter);
+} 
+    
+</script>
+    
+<script>
+$(document).ready(function(){
+// Slideshow functions
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    
+</script>
+    
+    
+    
+</head>
+
+<body>
+<div class="container-fluid" id="main">
+
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> 
+        <img id="logotop" src="./logo.jpg" alt="logo">
+        <div id="titletop"> 
+      		<h3> Seed Sustainable </h3>
+      		<p id="slogan"> Sustainable Investments &amp; Finance </p> 
+        </div>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="bar"><a href="#" class="tablinks active" onclick="opentab(event, 'Home')">Home</a></li>
+        <li id="bar"><a href="#" class="tablinks" onclick="opentab(event, 'About')">About</a></li>
+        <li id="bar" class="dropdown">
+          <a class="dropdown-toggle tablinks" data-toggle="dropdown" href="#" onclick="opentab(event, 'Work')"> Work <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           	<li><a href="#" class="tablinks" id="dpcss" onclick="opentab(event, 'IR')">Investment Research</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Business Development</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="tablinks" onclick="opentab(event, 'Contact'); toggle();">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header> <!-- end header ------------------------------------------------------------------>
+
+<section id="bg">
+    <section id="body">
+        <div id="Home" class="tabcontent" style="display: block">
+
+                    <h1 id="welcome"> WELCOME</h1>
+                    
+        </div> <!-- end Home tab -->
+
+        <div id="About" class="tabcontent">
+            <h1>ABOUT</h1>
+     
+        </div> <!-- end About tab -->
+
+        <div id="Work" class="tabcontent">
+            <h1>Work</h1>
+            <p>Work page is not built .... but Investment Research page is built. </p> 
+
+
+
+        </div> <!-- end Work tab -->
+
+        <div id="IR" class="tabcontent">
+            <h1>RESEARCH IN FOCUS:</h1>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img id="slidepic" src="./slide1.jpg" alt="pic1">
+                </div>
+                <div class="mySlides fade">
+                    <img id="slidepic" src="./slide2.jpg" alt="pic2">
+                </div>
+                <div class="mySlides fade">
+                    <img id="slidepic" src="slide3.jpg" alt="pic3">
+                </div>
+                <div id="boxover">
+                    <p id="quote">&quot;My Crown is called content, <br> a crown that seldom kings enjoy&quot; </p>
+                    <hr id="length2">
+                    <p id="quote">William Shakespare</p>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <br>
+            <div id="moveleft">
+                <p> I&#39;m a paragraph. Click here to add your own text and edit me. <br> It&#39;s easy. Just click &quot; Edit Text&quot; or double click me to add your own content and make changes to the font. I&#39;m a great place for youto tell a story and let your users know a little more about you.
+                </p>
+            </div>
+            
+            
+            
+            
+            
+            
+        </div> <!-- end Investment Research tab -->
+
+
+
+<div id="Contact" class="tabcontent">
+<h1>Contact</h1>
+    <div id="map" style="width:100%;height:500px"></div>
+   
+</div> <!-- end Contact tab -->
+
+</section>  <!-- end id=body -------------------------------------------------------------->
+</section>
+
+<footer>
+    <div class="row">
+        <div class="col-sm-4">
+            <div id="f1contain">
+            <div id="f1wrap">
+            <div id="f1">
+                <h3> SEED SUSTAINABLE </h3>
+                <p id="slogan"> Sustainable Investments &amp; Finance </p>
+            </div>
+            <img id="hstar" src="./hstar.jpg" alt="half star">
+            </div>
+            </div>
+        </div>    
+
+        <div class="col-sm-4">
+            <div id="f2a">
+                &copy;2016 Seed Sustainable  
+                <p> <a href="www.seedsustainable.com" id="link"> www.seedsustainable.com </a> </p>
+            </div>
+            <div id="f2b">
+                <p>401 Richmond St W., Suite 404 </p> 
+                <p>Toronto, ON,  M5V 3A8</p>
+            </div>
+        </div>
+        
+        <div class="col-sm-4">
+            <div id="f3a">
+                <p>401 Richmond St W., Suite 404 </p> 
+                <p>Toronto, ON,  M5V 3A8</p>    
+            </div>    
+            <div id="f3b">
+                &copy;2016 Seed Sustainable  
+                <p> <a href="www.seedsustainable.com" id="link"> www.seedsustainable.com </a> </p>
+            </div> 
+            <br>
+            <div id="media">
+                <a href="www.facebook.com"> Facebook </a>
+                <a href="www.twitter.com"> Twitter </a>
+            </div>
+        </div>
+  </div>
+
+</footer>
+
+</div> <!-- end fluid id=main div --------------------------------------------------------->
+</body>
+      
+</html>

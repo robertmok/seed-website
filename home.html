@@ -4,112 +4,184 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Enriqueta" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
 <title>
 SEED Sustainable
 </title>
 
 <style>
-/*------Header -------------------------------------------------------*/
+/*------ General -------------------------------------------------------*/
 header {
 	padding-top: 1%;
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-bottom: 5%;
 }
-
 #main.container-fluid{
 	padding: 0px;
 	margin: 0px;
 }
-
 #body {
 	clear: both;
 	margin-left: 15%;
 	margin-right: 15%;
+    margin-bottom: 5%;
 }
-
 #bg {
 	padding-top: 50px;
-	background-color: Ivory;	
+	background-color: white;	
+}
+footer {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+}
+
+#f1 {
+    float: left;
+    margin-top: -8px;
+    margin-bottom: 30px;
+}
+
+#f2a {
+    margin-top: 20px;
+    color: #848079;
+    clear: both;
+}
+#f2b {
+    color: #848079;
+    display: none;
+    margin-bottom: 30px;
+}
+
+#f1wrap {
+    display:inline-block;
+    margin:0 auto;
+}
+
+#f1contain {
+    text-align: center;
+}
+
+#f3a {
+    margin-top: 20px;
+    color: #848079;
+    text-align: left;
+}
+#f3b {
+    color: #848079;
+    display: none;
+}
+
+#link {
+    text-decoration: underline;
+    color: rgba(69,186,1,1);
+}
+    
+a:visited { 
+    background-color: white;
+}
+
+h1 {
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    color: #585551;
+}
+h2 {
+    font-style: normal;
+}
+    
+#slogan {
+    font-size: 14px;
+    font-family: 'Enriqueta', serif;
+    margin-top: -10px;
+    color: #848079;
 }
 
 
-
+    
 /*------ Menu -------------------------------------------------------- */
 .navbar-default {
      background-color: white;
      background-image: none;
      background-repeat: none;
      border-color: white;
-
 }
-
 .dropdown-menu {
     border-color: white;
     box-shadow: none;
+    font-size: 14px;
+    font-family: 'Enriqueta', serif;
+    color: #848079;
 }
-
 .navbar-default .navbar-nav > .active > a
 {
-    color: lightgreen;
+    color: #45BA01;
     background: white;
 }
-
+.navbar-default .navbar-nav > li > a {
+    background: white;
+    font-size: 14px;
+    font-family: 'Enriqueta', serif;
+    color: #848079;
+}
+.navbar-default .navbar-nav > li > a.active {
+    color: #45BA01;
+}
 .navbar-default .navbar-nav > .active > a:hover {
-    color: lightgreen;
+    color: #45BA01;
     background: white;
 }
-
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: white;
-    color: lightgreen;
+    color: #45BA01;
 }
-
 .dropdown-menu > li > a:hover {
     background-color: white;
-    color: lightgreen;
+    color: #45BA01;
 }
-
+.dropdown-menu > li > a.active{
+    background-color: white;
+    color: #45BA01;
+}
 .dropdown-toggle:active, .open .dropdown-toggle {
 	background:white!important; 
-	color:lightgreen !important;
+	color: #45BA01 !important;
 }
-
 .navbar-toggle {
 	background-color: white;	
 }
-
 #bar {
     border-right-style: solid;
     border-right-width: 1px; 
 }
-
 #logotop {
 	display: inline-block;	
 	float: left;
 	margin-right: 10px;
 }
-
 #titletop {
+    margin-top: 30px;
 	display: inline-block;
 	clear: both;
-		
 }
-
 #myNavbar {
 	padding-top: 50px;	
 }
-
 .navbar-header button {
 	margin-top: 60px;	
 }
-
 /*---------- Tabs --------------------------------------------------------*/
-
 /* Style the list */
 ul.tab {
     list-style-type: none;
@@ -131,15 +203,15 @@ ul.tab li a {
     transition: 0.3s;
     font-size: 14px;
     font-family: 'Enriqueta', serif;
-    color: gray;
+    color: #848079;
 }
 /* Change background color of links on hover */
 ul.tab li a:hover {
-    color: lightgreen;
+    color: rgba(69,186,1,1);
 }
 /* Create an active/current tablink class */
 ul.tab li .active, a:focus {
-    color: lightgreen;
+    color: rgba(69,186,1,1);
 }
 /* Style the tab content */
 .tabcontent {
@@ -159,99 +231,488 @@ ul.tab li .active, a:focus {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
 /*---------- Homepage ------------------------------------------------------*/
 #homepage {
 	position: relative;
-	display: inline;
+	/*display: inline;*/
+    /*padding: 50px;*/
+    /*background: url(./home.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+   */
 }
 
 #homepage img {
 	width: 100%;
-	max-width: 920px;
 	display: block;
     margin: 0 auto;
 }
-
+    
 #c1 {
 	position: absolute;
-    background: YellowGreen;
+    background: rgba(69, 186, 1, 1);
     color: white;
-    bottom: 50px;
+    bottom: 40px;
+    left: 0%;
+    width: 23%;
+    transition: 0.3s;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
-    
 #c1:hover {
     background-color: darkgreen;
 }
-    
 #c1 a {
+    display:block; 
+    height:100%;
+    padding: 20px;
     text-decoration: none;
     color: white;
 }
-
+    
 #c2 {
     position: absolute;
-    background: YellowGreen;
+    background: rgba(69, 186, 1, 1);
     color: white;
-    bottom: 50px;
-    left: 33%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 45px;
-    padding-right: 45px;
+    left: 25.5%;
+    bottom: 40px;
+    width: 23%;
     transition: 0.3s;
     font-size: 25px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
-    
 #c2:hover {
     background-color: darkgreen;
+}
+#c2 a {
+    display:block; 
+    height:100%;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
 }
     
 #c3 {
     position: absolute;
-    background: YellowGreen;
+    background: rgba(69, 186, 1, 1);
     color: white;
-    bottom: 50px;
-    left: 52%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 45px;
-    padding-right: 45px;
+    right: 25.5%;
+    bottom: 40px;
+    width: 23%;
     transition: 0.3s;
     font-size: 25px;
+    text-align: center;
     font-family: 'Open Sans', sans-serif;
-}
-    
+} 
 #c3:hover {
     background-color: darkgreen;
+}
+#c3 a {
+    display:block; 
+    height:100%;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
 }
     
 #c4 {
     position: absolute;
-    background: YellowGreen;
+    background: rgba(69, 186, 1, 1);
     color: white;
-    bottom: 50px;
-    left: 70%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 45px;
-    padding-right: 45px;
+    right: 0%;
+    bottom: 40px;
+    width: 23%;
     transition: 0.3s;
     font-size: 25px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
-    
 #c4:hover {
     background-color: darkgreen;
 }
+#c4 a {
+    display:block; 
+    height:100%;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+    
+#star1 {
+    float: right;
+    display: none;
+}
+    
+#star2 {
+    float: left;
+}
+    
+#desc {
+    margin-left: 50%;
+    color: #848079;
+}
 
+/*---------- About page ------------------------------------------------------*/
+#aboutinfo1, #aboutinfo2 {
+    margin-left: 30%;
+    color: #848079;
+}
+#bold {
+    color: black;
+}    
+#highlight {
+    color: rgba(69,186,1,1);
+}
+#morelink {
+    text-align: right;
+} 
+    
+#p1, #p2, #p3 {
+    width: 32%;
+    display: inline-block;
+    padding: 10px;
+}
+.center {
+    text-align: center;
+}
+#length {
+    width: 30px;
+}
+#ppl {
+    border-radius: 50%; 
+    display: block;
+    margin: 0 auto;
+}
+    
+/*--------- Work Page --------------------------------------------------*/  
+    
+    
+/*--------- Investment Research Page --------------------------------------------------*/  
+ #slidepic {
+    max-width: 1000px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+}
 
+.mySlides, .mySlides2 {
+    display:none
+}
 
+/* Slideshow container */
+.slideshow-container, .slideshow-container2 {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
 
+/* The dots/bullets/indicators */
+.dot, .dot2 {
+  display: none;
+  transition: background-color 0.6s ease;
+}
 
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+    
+#boxover {
+    position:absolute;
+    width: 40%;
+    left: 32%; 
+    top: 35%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(69, 186, 1, 1);
+    color: white;
+}
+
+#moveleft {
+    margin-left: 50%;
+    color: #848079;
+}
+
+#length2 {
+    width: 60px;
+}
+    
+/* Grid */
+.row > .column {
+    padding: 0 8px;
+}
+    
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 25%;
+    margin: 10px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    height: 80%;
+    padding: 10px 1px;
+    transition: 0.3s;
+}
+.column img:hover {
+    opacity: 0.2;
+}
+
+#grid {
+    width: 80%;
+    margin-left: 16%;
+}
+    
+/* Same height panels */
+.row { 
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+    
+/* Modal */
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 700px;
+}
+    
+/* Add Animation */
+.modal-content, #caption, .mySlides3 img {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 1s;
+    animation-name: zoom;
+    animation-duration: 1s;
+}
+@-webkit-keyframes zoom {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes zoom {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}    
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  opacity: 1;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mySlides3 {
+  display: none;
+}
+.mySlides3 img {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    background-color: black;
+}
+    
+.cursor {
+  cursor: pointer
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0%;
+  border-radius: 3px 0 0 3px;
+}
+    
+.prev {
+    left: 0%;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+/*--------- Contact Page --------------------------------------------------*/ 
+#contactbg {
+    position: relative;
+    margin-bottom: 5%;
+}
+    
+#contactbg img {
+    width: 100%;
+    height: auto;
+}
+    
+#overlay {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    position: absolute;
+    background: rgba(69, 186, 1, 1);
+    color: white;
+    bottom: 30%;
+    left: 28%;
+    width: 50%;
+}
+    
+.row3 {
+    margin: 3%;
+    overflow: hidden;
+
+}
+
+#form1 {
+    color: #585551;
+}
+
+input {
+    color: #848079;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    border-color: rgba(143, 209, 105, 1);
+    border-width: 1px;
+    border-style: solid;
+    
+}
+    
+textarea {
+    width: 100%;
+    height: 110px;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-top: 0px;
+    resize: none;   
+    border-color: rgba(143, 209, 105, 1);
+    border-width: 1px;
+    border-style: solid;
+    color: #848079;
+}
+    
+#send {
+    padding: 5px;
+    background-color: #8FD169;
+    color: white;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-width: 0px;
+}
+
+#cf1 {
+    float: left;    
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+#cf2 {
+    float: left;
+    margin-bottom: 50px;
+}
+
+#cf3 {
+    border-color: #848079;
+    border-width: 3px;
+    border-style: solid;
+    padding: 15px;
+    clear: both;
+    width: 80%;
+}
+
+#sub {
+    width: 100%;
+    padding: 10px;
+    background-color: #8FD169;
+    color: white;
+    margin-right: -4px;
+    border-width: 0px;
+}
+
+#map {    
+    width:100%;
+    height:300px;
+}
 
 /*--------- Media Queries --------------------------------------------------*/
 /* Screen 768px or smaller (Mobile) */
-@media (max-width: 768px)
+@media only screen and (max-width: 768px)
 {
 	#logotop {
 		clear: both;	
@@ -264,53 +725,232 @@ ul.tab li .active, a:focus {
 		margin-right: 1%;
 		padding-bottom: 5%;
 	}
-
 	#bar {
    	 	border-right-style: none;
     	border-right-width: 0px; 
 	}
+    
+    #myNavbar {
+	   padding-top: 0px;	
+    }
 	
 	#c1 {
-	  position: static;
-	  display: block;
-	  background: YellowGreen;
-	  color: white;
-	  left: 50px;
-	  top: 50px;
-	  transition: 0.3s;
-	  font-size: 25px;
+        position: static;
+        display: block;
+        background: rgba(69, 186, 1, 1);
+        color: white;
+        transition: 0.3s;
+        font-size: 25px;
+        width: 100%;
+        padding-right: 30px;
+        text-align: right;
 	}
-  /*  
-  #c2 {
-	  position: static;
-	  display: block;
-	  background: YellowGreen;
-	  color: white;
-	  transition: 0.3s;
-	  font-size: 25px;
-  }
-    
-  #c3 {
-	  position: static;
-	  display: block;
-	  background: YellowGreen;
-	  color: white;
-	  transition: 0.3s;
-	  font-size: 25px;
-  }
-	  
-  #c4 {
-	  position: static;
-	  display: block;
-	  background: YellowGreen;
-	  color: white;
-	  transition: 0.3s;
-	  font-size: 25px;
-  } */
-}
+    #c1 a {
+        display:block; 
+        height:100%;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+    }
+  
+    #c2 {
+        position: static;
+	    display: block;
+	    background: rgba(69, 186, 1, 1);
+        color: white;
+	    transition: 0.3s;
+	    font-size: 25px;
+        width: 100%;
+        padding-right: 30px;
+        text-align: right;
+    }
+    #c2 a {
+        display:block; 
+        height:100%;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+    }
 
+    #c3 {
+	    position: static;
+	    display: block;
+	    background: rgba(69, 186, 1, 1);
+	    color: white;
+	    transition: 0.3s;
+	    font-size: 25px;
+        width: 100%;
+        padding-right: 30px;
+        text-align: right;
+    }
+    #c3 a {
+        display:block; 
+        height:100%;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+    }
+	  
+    #c4 {
+	    position: static;
+	    display: block;
+	    background: rgba(69, 186, 1, 1);
+	    color: white;
+	    transition: 0.3s;
+	    font-size: 25px;
+        width: 100%;
+        padding-right: 30px;
+        text-align: right;
+    }
+    #c4 a {
+        display:block; 
+        height:100%;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+    }
+
+   .tabcontent {
+        display: none;
+        padding: 0px 0px;
+    }    
+    
+    #homepage2 {
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+     #star1 {
+        float: right;
+        display: inline-block;
+    }
+    
+    #welcome {
+        float: left;
+    }
+    
+    #clear {
+        clear:both;
+    }
+    
+    #star2 {
+        display: none;
+    }
+    
+    #desc {
+        margin-left: 0%;
+    }
+    
+    /* Footer */
+    footer {
+        text-align: center;
+        margin-left: 5%;
+	    margin-right: 5%;
+    }
+    
+    #f1contain, #f2b {
+        text-align: left;
+    }
+    
+    #f2a {
+        display: none;
+    }
+    #f2b {
+        display: block;
+    }
+    
+    #f3a {
+        display: none;
+    }
+    #f3b {
+        text-align: right;
+        display: block;
+    }
+    #media {
+        display: none;
+    }
+    
+    /* About */
+    #About {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #aboutinfo1, #aboutinfo2 {
+        margin-left: 0%;
+    }
+    
+    /* Investment Research */
+    #IR {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #moveleft {
+        margin-left: 0%;
+    }
+    
+    #grid {
+        width: 100%;
+        margin: 5%;
+    }
+    
+    .column img {
+        width: 100%;
+        height: 85%;
+        padding: 10px 1px;
+        transition: 0.3s;
+    }
+    
+    .column {
+        float: left;
+        width: 40%;
+        margin: 10px;
+        background-color: lightgray;
+        text-align: center;
+    }
+    
+    /* Contact */
+    #contactbg {
+        position: relative;
+        margin: 5%;
+    }
+    #overlay {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        text-align: center;
+        position: absolute;
+        background: rgba(69, 186, 1, 1);
+        color: white;
+        bottom: 20%;
+        left: 28%;
+        width: 50%;
+    }
+    #rightfield {
+        clear: both;
+    }
+    #cf3 {
+        border-color: #848079;
+        border-width: 3px;
+        border-style: solid;
+        padding: 15px;
+        clear: both;
+        width: 100%;
+    }
+    #map {    
+        width:90%;
+        margin:auto;
+        height:300px;
+    }
+    
+    /* Work */
+     #Work {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+    
 /* Screen 956px or smaller */
-@media (max-width: 956px)
+@media only screen and (max-width: 956px)
 {
 	header {
 		padding-top: 1%;
@@ -321,15 +961,55 @@ ul.tab li .active, a:focus {
 	
 	#body {
 		clear: both;
-		margin-left: 2%;
-		margin-right: 2%;
+		margin-left: 0%;
+		margin-right: 0%;
 	}
+    
+    footer {
+        text-align: center;
+        margin-left: 5%;
+	    margin-right: 5%;
+    }
+    /* ------------------ */
+    #About {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    #p1, #p2, #p3 {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+    }
+    /* ------------------ */
+    #IR {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+     #grid {
+        width: 100%;
+        margin: 5%;
+    }
+    /* ------------------ */
+     #Work {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+
 }
-
-
-
+/* Screen 1350px or smaller */
+@media only screen and (max-width: 1350px)
+{
+     #aboutinfo2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+    
 /* Screen 768px or larger */
-@media (min-width: 768px) 
+@media only screen and (min-width: 768px) 
 {
     ul.nav li.dropdown:hover > ul.dropdown-menu 
     {
@@ -337,13 +1017,10 @@ ul.tab li .active, a:focus {
     }
 }
 
-
-
-
-
 </style>
 
 <script>
+// Open tab links
 function opentab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -361,10 +1038,117 @@ function opentab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }    
+
+// Open Modal from grid
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+    
+// Modal slideshow functions
+var slideIndex3 = 1;
+showSlides3(slideIndex3);
+    
+function plusSlides(n) {
+  showSlides3(slideIndex3 += n);
+}
+function currentSlide(n) {
+  showSlides3(slideIndex3 = n);
+}
+    
+function showSlides3(n) {
+  var i;
+  var slides3 = document.getElementsByClassName("mySlides3");
+  var dots3 = document.getElementsByClassName("demo");
+  var captionText3 = document.getElementById("caption");
+  if (n > slides3.length) {slideIndex3 = 1}
+  if (n < 1) {slideIndex3 = slides3.length}
+  for (i = 0; i < slides3.length; i++) {
+      slides3[i].style.display = "none";
+  }
+  for (i = 0; i < dots3.length; i++) {
+      dots3[i].className = dots3[i].className.replace(" active", "");
+  }
+  slides3[slideIndex3-1].style.display = "block";
+  dots3[slideIndex3-1].className += " active";
+  captionText3.innerHTML = dots3[slideIndex3-1].alt;
+}
+    
+// Google Maps
+function initialize() {
+    var myCenter = new google.maps.LatLng(43.647814,-79.39461110000002);
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {center: myCenter, zoom: 15};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    var infowindow = new google.maps.InfoWindow({
+        content: "SEED SUSTAINABLE"
+    });
+    infowindow.open(map,marker);
+
+    google.maps.event.addDomListener(window, "resize", function() {
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(myCenter);   
+    });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+function toggle() {
+    initialize();
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(myCenter);
+} 
   
-
 </script>
+<script>
+$(document).ready(function(){
+// Slideshow functions
+var slideIndex = 0;
+showSlides();
 
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    
+var slideIndex2 = 0;
+showSlides2();
+
+function showSlides2() {
+    var i;
+    var slides2 = document.getElementsByClassName("mySlides2");
+    var dots2 = document.getElementsByClassName("dot2");
+    for (i = 0; i < slides2.length; i++) {
+       slides2[i].style.display = "none";
+    }
+    slideIndex2++;
+    if (slideIndex2 > slides2.length) {slideIndex2 = 1}
+    for (i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
+    }
+    slides2[slideIndex2-1].style.display = "block";
+    dots2[slideIndex2-1].className += " active";
+    setTimeout(showSlides2, 2000); // Change image every 2 seconds
+}
+    
+    
+});
+</script>
 
 </head>
 
@@ -383,7 +1167,7 @@ function opentab(evt, tabName) {
       <a class="navbar-brand" href="#"> 
         <img id="logotop" src="./logo.jpg" alt="logo">
         <div id="titletop"> 
-      		<h3> Seed Sustainable </h3>
+      		<h1> SEED SUSTAINABLE </h1>
       		<p id="slogan"> Sustainable Investments &amp; Finance </p> 
         </div>
       </a>
@@ -400,7 +1184,7 @@ function opentab(evt, tabName) {
             <li><a href="#">Business Development</a></li>
           </ul>
         </li>
-        <li><a href="#" class="tablinks" onclick="opentab(event, 'Contact')">Contact</a></li>
+        <li><a href="#" class="tablinks" onclick="opentab(event, 'Contact'); toggle();">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -408,68 +1192,416 @@ function opentab(evt, tabName) {
 </header> <!-- end header ------------------------------------------------------------------>
 
 <section id="bg">
-<section id="body">
-<div id="Home" class="tabcontent" style="display: block">
+    <section id="body">
+        <div id="Home" class="tabcontent" style="display: block">
+            <div id="homepage">
+                <img src="./home.jpg" alt="home">
+                <div id="c1"><a href="#" class="tablinks" onclick="opentab(event, 'IR')">Research </a></div>
+                <div id="c2"><a href="#"> Strategies </a></div>
+                <div id="c3"><a href="#"> Solutions </a></div>
+                <div id="c4"><a href="#"> Education </a></div>
+            </div>
+            <div id="homepage2">
+                <div id="info">
+                    <br><br>
+                    <h1 id="welcome"> WELCOME</h1>
+                    <div id="star1">
+                        <img src="./star.jpg" alt="star">
+                    </div>
+                    <hr id="clear">
+                    <div id="star2">
+                        <img src="./star.jpg" alt="star">
+                    </div>
+                    <div id="desc">
+                        <p>We are a finance and investment services firm located in downtown Toronto that offers sustainable investment research &amp; analysis, finance &amp; business development consulting services, and unique professional development &amp; educational programs. </p>
 
-<div id="homepage">
-	<div id="c1"><a href="#" class="tablinks" onclick="opentab(event, 'IR')">Research </a></div>
-</div>
+                        <p>Our <a href="#" id="link" onclick="opentab(event, 'Work')"> Investment Research &amp; Analytics </a> team engages in in-depth analysis of sustainable investments from public securities and funds, to impact investments.  We develop investment tools and produce research based on proprietary data analytics and models. </p>
 
-</div> <!-- end Home tab -->
+                        <p> Our <a href="#BSA" id="link" onclick="opentab(event, 'Work')"> Business Consulting &amp; Advisory </a> practice leverages upon both our in-house expertise and an extended partnership network with expertise from a variety of fields and business areas, allowing us to offer full package solutions to our clients for their varying needs. </p>
+                    </div>
+                </div>    
+            </div> <!-- end homepage2 --> 
+        </div> <!-- end Home tab -->
 
-<div id="About" class="tabcontent">
-<h1>ABOUT</h1>
-<div id="c2"> Strategies </div>
-    <div id="c3"> Solutions </div>
-    <div id="c4"> Education </div>
+        <div id="About" class="tabcontent">
+            <h1>ABOUT</h1>
+            <hr>
+            <div id="aboutinfo1">
+                <h2 id="highlight">WHAT WE DO</h2>
+                <br>
+                <p>
+                We are a finance and investment services firm located in the heart of beautiful downtown Toronto that offers sustainable investment research &amp; analysis, finance &amp; business development consulting services, and unique professional development &amp; educational programs.  We provide comprehensive research, analytics, and innovative solutions for socially responsible investors and sustainable businesses. 
+                <br><br>
+                Our mission is to support the advancement of socially &amp; environmentally responsible businesses and investments, through providing value-added alternatives and helping sustainable businesses flourish.  
+                </p>
+                <br><br><br>
+                
+                <h4 id="highlight"> SUSTAINABLE INVESTMENTS RESEARCH </h4>
+                <p>
+                Our <span id="bold"> Investment Research &amp; Analytics </span> team engages in in-depth analysis of sustainable investments on a full spectrum of investment alternatives - from public securities, mutual funds and ETFs, to private equity and impact investments.  
+                <br><br>
+                We develop proprietary investment models and data analytical tools, and produce a full suite of research products based on our proprietary models and findings.   Our suite of analytics, research and reports offer investors comprehensive and intelligent investment resources for responsibly minded investors.
+                </p>
+                <div id="morelink">
+                     <a href="#" id="link" onclick="opentab(event, 'Work')"> Learn more </a>
+                </div>
+                <br><br>
 
+                <h4 id="highlight"> FINANCE &amp; BUSINESS DEVELOPMENT </h4>
+                <p>
+                Our <span id="bold"> Business Consulting &amp; Advisory </span> practice leverages upon both our in-house expertise and our extended advisory network with expertise in a variety of business areas and fields.
+                <br><br>
+                We offer business development services including business plan development, ongoing financial and strategic planning.  We also offer unique custom business analytics, operational efficiency tools, and information technology solutions.  Our integrative approach and customized services offer offer both project specific and full package solutions to our clients for their unique business development needs.  
+                </p> 
+                <div id="morelink">
+                     <a href="#BSA" id="link" onclick="opentab(event, 'Work')"> Learn more </a>
+                </div>
+                <br><br>
+            </div>
+            <br><br>
 
+            <h1>PEOPLE</h1>
+            <hr> 
+            <div id="aboutinfo2">
+                <div id="p1">
+                    <img id="ppl" src="./adriane.png" alt="adriane">
+                    <br>
+                    <h2 class="center" id="highlight"> Adriane Flynn</h2>
+                    <hr id="length">
+                    <p class="center"> Founder &amp; CEO </p>
+                    <p>I&#39;m a paragraph. Click here to add your own text and edit me. It&#39;s easy. Just click &quot; Edit Text&quot; or double click me to add your own content and make changes to the font.</p>
+                </div>
+                <div id="p2">
+                    <img id="ppl" src="./sara.png" alt="sara">
+                    <br>
+                    <h2 class="center" id="highlight"> Sara Fischer</h2>
+                    <hr id="length">
+                    <p class="center"> Head of Marketing </p>
+                    <p>I&#39;m a paragraph. Click here to add your own text and edit me. It&#39;s easy. Just click &quot; Edit Text&quot; or double click me to add your own content and make changes to the font.</p>
+                </div>  
+                <div id="p3">
+                    <img id="ppl" src="./tom.png" alt="tom">
+                    <br>
+                    <h2 class="center" id="highlight"> Tom Portman</h2>
+                    <hr id="length">
+                    <p class="center">Head of Advertising </p>
+                    <p>I&#39;m a paragraph. Click here to add your own text and edit me. It&#39;s easy. Just click &quot; Edit Text&quot; or double click me to add your own content and make changes to the font.</p>
+                </div>  
+            </div>
+ 
+        </div> <!-- end About tab -->
 
+        <div id="Work" class="tabcontent">
+            <h1>WORK</h1>
+            <hr>
+            <div id="aboutinfo1">
+                <h2 id="highlight">INVESTMENT RESEARCH &amp; ANALYTICS</h2>
+                <br>
+                <p>
+                Our <span id="bold"> Investment Research &amp; Analytics </span> team engages in in-depth analysis of sustainable investments on a full spectrum of investment alternatives - from stocks, mutual funds and ETFs, to private equity, micro-finance and impact investments.   
+                <br>
+                Through our in-house expertise in data modelling and analytics, we model and evaluate complex investment risk factors, fundamental and environmental factors, ESG data, and other data intelligence, and combine this work into leading edge data analytics tools and research, offering comprehensive and intelligent investment resources for responsible investors and institutions.  
+                </p>
+                <br><br>
+                <h4 id="highlight"> SUSTAINABLE INVESTMENTS RESEARCH </h4>
+                <p>
+                We develop proprietary multi-factor models and data analytic tools, and produce research based on these proprietary models and findings, offering sophisticated sustainable investments research &amp; analysis, to help socially &amp; environmentally responsible investors intelligently evaluate their alternatives.  
+                <br><br>
+                Our core Sustainable Investment Research products include:
+                </p>
+                <ul>
+                    <li>Our <span id="highlight"> Sustainable Investment Score </span> -  Our proprietary evaluation framework for investments, based on social, environmental, and economic factors, and other data intelligence.</li>
+                    <li>Our <span id="highlight"> Sustainable Investment Alternatives </span> research reports offers objective and insightful evaluations of socially responsible, ethical, and green investment alternatives, for both individuals and institutions.</li>
+                    <li>Our <span id="highlight"> Sustainable Model Portfolios </span> and <span id="highlight"> Sustainable Stock Lists </span> are based on our proprietary analytics and models, offering unique sustainable portfolio alternatives and portfolio construction intelligence.</li>
+                </ul>
+                <br>
+                <h4 id="highlight"> DUE DILIGENCE &amp; INVESTMENT PORTFOLIO EVALUATIONS </h4>
+                <p>
+                We offer professional unbiased third-party due diligence and investment assessment services for specific investment opportunities, as well as investment manager performance and evaluation of total investment portfolios.  Our investment due diligence services include objective investment portfolio and investment manager evaluations, portfolio risk factor assessments, and ongoing portfolio monitoring services. 
+                <br><br>
+                Our core Due Diligence &amp; Investment Portfolio Evaluation products include:
+                </p> 
+                <ul>
+                    <li>Our <span id="highlight"> Investment Portfolio Evaluation </span> report comprehensively evaluates investment and risk metrics, including fundamental factors, asset allocation, industry risk exposure, currency risk exposure, as well as ESG and key environmental factors, including a portfolio's Carbon Intensity Profile.</li>
+                    <li>Our <span id="highlight">  Carbon Footprint Assessment </span> report uncovers the collective carbon intensity of an investment fund or portfolio and compares this against various benchmarks, identifies where its carbon concentrations lie, provides solid alternatives for portfolio de-carbinization, and offers solution for reallocating capital towards lower emitting solutions to lessen its environmental footprint. </li>
+                </ul>
+                <hr id="BSA">
+                <br>
+                <h2 id="highlight"> BUSINESS CONSULTING &amp; ADVISORY </h2>
+                <p>
+                Our <span id="bold"> Business Consulting &amp; Advisory </span> practice offers finance &amp; strategic planning, business plan development, and professional due diligence services for businesses - with a particular mission to help organizations engaged in the fields of health &amp; wellness, environmental welfare, arts and education.   
+                </p> 
+                <p id="highlight">FINANCE &amp; BUSINESS DEVELOPMENT </p>
+                <p>
+                We work alongside our clients at any stage, to provide in-depth assessments of their business needs, provide customized financial &amp; operational help to manage resources more effectively, and develop the custom analytical tools &amp; processes to more efficiently and effectively achieve their business goals.
+                <br><br>
+                Our Business Consulting &amp; Advisory services include:
+                </p>
+                <ul>
+                    <li> Financial &amp; Strategic Planning</li>
+                    <li> Business Plan Development</li>
+                    <li> Scenario Analysis &amp; Risk Assessment </li>
+                    <li> Customized Tools, Models &amp; Analytics </li>
+                    <li> Third-Party Due Diligence Reports </li>
+                </ul>
+                <p id="highlight">STRATEGIC PARTNERSHIPS </p>
+                <p> 
+                We provide comprehensive value-added solution packages that aid clients in effectively achieving their goals, whether it be consultation on a particular project, or forming longer-term strategic partnerships.
+                <br>
+                Our practice leverages upon both our in-house expertise and an extended partnership network with expertise from a variety of fields and business areas, allowing us to offer full package solutions to our clients for their varying business development, operational and management needs. 
+                </p>
+                <br><br>
+            </div> 
 
-</div> <!-- end About tab -->
+        </div> <!-- end Work tab -->
 
-<div id="Work" class="tabcontent">
-<h1>Work</h1>
+        <div id="IR" class="tabcontent">
+            <h1>RESEARCH IN FOCUS:</h1>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img id="slidepic" src="./slide1.jpg" alt="pic1">
+                </div>
+                <div class="mySlides fade">
+                    <img id="slidepic" src="./slide2.jpg" alt="pic2">
+                </div>
+                <div class="mySlides fade">
+                    <img id="slidepic" src="slide3.jpg" alt="pic3">
+                </div>
+                <div id="boxover">
+                    <p id="quote">&quot;My Crown is called content, <br> a crown that seldom kings enjoy&quot; </p>
+                    <hr id="length2">
+                    <p id="quote">William Shakespare</p>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <br>
+            <div id="moveleft">
+                <p> I&#39;m a paragraph. Click here to add your own text and edit me. <br> It&#39;s easy. Just click &quot; Edit Text&quot; or double click me to add your own content and make changes to the font. I&#39;m a great place for youto tell a story and let your users know a little more about you.
+                </p>
+            </div>
+            <br><br>
+            <h1>INDUSTRY RESEARCH:</h1>
+            <div class="slideshow-container2">
+                <div class="mySlides2 fade">
+                    <img id="slidepic" src="./slide1.jpg" alt="pic4">
+                </div>
+                <div class="mySlides2 fade">
+                    <img id="slidepic" src="./slide2.jpg" alt="pic5">
+                </div>
+                <div class="mySlides2 fade">
+                    <img id="slidepic" src="slide3.jpg" alt="pic6">
+                </div>
+                <div id="boxover">
+                    <p id="quote">&quot;Creativity is piercing the mundane <br> to find the marvelous&quot;</p>
+                    <hr id="length2">
+                    <p id="quote">Bill Moyers</p>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot2"></span>
+                <span class="dot2"></span>
+                <span class="dot2"></span>
+            </div>
+            <br>
+            <div id="moveleft">
+                <p> I&#39;m a paragraph. Click here to add your own text and edit me. <br> It&#39;s easy. Just click &quot; Edit Text&quot; or double click me to add your own content and make changes to the font. I&#39;m a great place for youto tell a story and let your users know a little more about you.
+                </p>
+            </div>
+            <br><br>
+            
+            <div id="grid"> 
+                <div class="row">
+                  <div class="column">
+                    <img src="./gridpic.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                      <p>Cafe in Autumn</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                      <p>Mountain Lake</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                      <p>Foggy Pier</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                      <p>Cafe in Autumn 2</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic2.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                      <p>Mountain Lake 2</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic3.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                      <p>Foggy Pier 2</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                      <p>Cafe in Autumn 3</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic2.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                      <p>Mountain Lake 3</p>
+                  </div>
+                  <div class="column">
+                    <img src="./gridpic3.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+                      <p>Foggy Pier 3</p>
+                  </div>
+                </div>
+                
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                  <div class="modal-content">
 
+                    <div class="mySlides3">
+                      <img class="demo" src="./gridpic.jpg" alt="Cafe in Autumn">
+                    </div>
 
+                    <div class="mySlides3">
+                      <img class="demo"  src="./gridpic2.jpg" alt="Mountain Lake">
+                    </div>
 
+                    <div class="mySlides3">
+                      <img class="demo" src="./gridpic3.jpg" alt="Foggy Pier">
+                    </div>
 
+                    <div class="mySlides3">
+                      <img class="demo" src="./gridpic.jpg" alt="Cafe in Autumn 2">
+                    </div>
 
-</div> <!-- end Work tab -->
+                    <div class="mySlides3">
+                      <img class="demo"  src="./gridpic2.jpg" alt="Mountain Lake 2">
+                    </div>
 
-<div id="IR" class="tabcontent">
-<h1>RESEARCH IN FOCUS:</h1>
+                    <div class="mySlides3">
+                      <img class="demo" src="./gridpic3.jpg" alt="Foggy Pier 2">
+                    </div>
 
+                    <div class="mySlides3">
+                      <img class="demo" src="./gridpic.jpg" alt="Cafe in Autumn 3">
+                    </div>
 
+                    <div class="mySlides3">
+                      <img class="demo"  src="./gridpic2.jpg" alt="Mountain Lake 3">
+                    </div>
 
-</div> <!-- end Investment Research tab -->
+                    <div class="mySlides3">
+                      <img class="demo" src="./gridpic3.jpg" alt="Foggy Pier 3">
+                    </div>
 
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                  </div>
+                </div> <!-- end id=myModal -->
+                
+            </div> <!-- end id=grid -->
+            
+        </div> <!-- end Investment Research tab -->
 
-<div id="Contact" class="tabcontent">
-<h1>Contact</h1>
+        <div id="Contact" class="tabcontent">
+            <div id="contactbg">
+                <img src="./contact.jpg" alt="contact">    
+                <div id="overlay">
+                    <h2> Contact us! </h2>   
+                </div>
+            </div>
+            <div class="row3">
+                <div class="col-sm-5">
+                    <form>
+                        <div id="form">
+                            <h4 id="form1"> Name </h4>
+                            <input type="text" name="Name"><br>
+                            <h4 id="form1"> Email </h4>
+                            <input type="text" name="Email"><br>
+                            <h4 id="form1"> Subject </h4>
+                            <input type="text" name="Subject"><br>
+                            <h4 id="form1"> Message </h4>
+                            <textarea></textarea>
+                            <br>
+                            <input id="send" type="submit" value="Send">
+                        </div>
+                    </form>
+       
+                </div>    
 
+                <div class="col-sm-7" id="rightfield">
+                    <div id="cf1">
+                        <h1> SEED SUSTAINABLE </h1>
+                        <p id="slogan"> Sustainable Investments &amp; Finance </p>
+                    </div>
+                    <div id="cf2">
+                        <p id="highlight"> Tel: 416-895-7111 </p>
+                        <p id="highlight"> 401 Richmond St W., Suite 404 <br> Toronto, ON, M5V 3A8</p>
+                    </div>
+                    <div id="cf3">
+                        <p id="highlight"> Join our mailling list <br> Never miss an update. </p>
+                        <form>
+                            <input type="text" name="Name2"  placeholder="Name"><br><br>
+                            <input type="text" name="Email2"  placeholder="Email Address"><br><br>
+                            <input id="sub" type="submit" value="Subscribe Now">
+                        </form>
+                    </div>
+                </div>
+          </div>
+          <br>
+          <div id="map"></div>
+        </div> <!-- end Contact tab -->
 
-
-
-</div> <!-- end Contact tab -->
-
-</section>  <!-- end id=body -------------------------------------------------------------->
+    </section>  <!-- end id=body -------------------------------------------------------------->
 </section>
 
 <footer>
+    <div class="row2">
+        <div class="col-sm-4">
+            <div id="f1contain">
+            <div id="f1wrap">
+            <div id="f1">
+                <h1> SEED SUSTAINABLE </h1>
+                <p id="slogan"> Sustainable Investments &amp; Finance </p>
+            </div>
+            <img id="hstar" src="./hstar.jpg" alt="half star">
+            </div>
+            </div>
+        </div>    
 
-
+        <div class="col-sm-4">
+            <div id="f2a">
+                &copy;2016 Seed Sustainable  
+                <p> <a href="www.seedsustainable.com" id="link"> www.seedsustainable.com </a> </p>
+            </div>
+            <div id="f2b">
+                <p>401 Richmond St W., Suite 404
+                <br> Toronto, ON,  M5V 3A8 </p>
+            </div>
+        </div>
+        
+        <div class="col-sm-4">
+            <div id="f3a">
+                <p>401 Richmond St W., Suite 404 
+                <br> Toronto, ON,  M5V 3A8</p>    
+            </div>    
+            <div id="f3b">
+                &copy;2016 Seed Sustainable  
+                <p> <a href="www.seedsustainable.com" id="link"> www.seedsustainable.com </a> </p>
+            </div> 
+            <br>
+            <div id="media">
+                <a href="https://www.facebook.com"><img src="./fb.png" alt="facebook icon" height="30" width="30"></a>
+                <a href="https://www.twitter.com"><img src="./twitter.png" alt="facebook icon" height="30" width="30"></a>
+            </div>
+        </div>
+  </div>
 
 </footer>
 
 </div> <!-- end fluid id=main div --------------------------------------------------------->
 </body>
-
 </html>
-
-
-
-
-
-
