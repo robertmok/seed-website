@@ -1,6 +1,6 @@
 # seed-website
 
-Replicating http://www.seedsustainable.com/  [Old Link(Expired): http://info504546.wixsite.com/seedtest ]
+Replicating http://www.seedsustainable.com/  ~~Old Link(Expired): http://info504546.wixsite.com/seedtest ~~
 
 ##Live Demo: https://robertmok.github.io/seed-website/
 
