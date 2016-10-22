@@ -176,10 +176,10 @@ h2 {
 	clear: both;
 }
 #myNavbar {
-	padding-top: 50px;	
+	padding-top: 65px;	
 }
 .navbar-header button {
-	margin-top: 60px;	
+	margin-top: 80px;	
 }
 /*---------- Tabs --------------------------------------------------------*/
 /* Style the list */
@@ -909,6 +909,17 @@ textarea {
         text-align: center;
     }
     
+    #boxover {
+        position:absolute;
+        width: 90%;
+        left: 5%; 
+        top: 20%;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(69, 186, 1, 1);
+        color: white;
+    }
+    
     /* Contact */
     #contactbg {
         position: relative;
@@ -1146,6 +1157,10 @@ function showSlides2() {
     setTimeout(showSlides2, 2000); // Change image every 2 seconds
 }
     
+$('.nav a#clickable').click(function() {
+  $('.navbar-collapse').collapse('hide');  
+});
+    
     
 });
 </script>
@@ -1174,17 +1189,17 @@ function showSlides2() {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li id="bar"><a href="#" class="tablinks active" onclick="opentab(event, 'Home')">Home</a></li>
-        <li id="bar"><a href="#" class="tablinks" onclick="opentab(event, 'About')">About</a></li>
+        <li id="bar"><a href="#" id="clickable" class="tablinks active" onclick="opentab(event, 'Home')">Home</a></li>
+        <li id="bar"><a href="#" id="clickable" class="tablinks" onclick="opentab(event, 'About')">About</a></li>
         <li id="bar" class="dropdown">
           <a class="dropdown-toggle tablinks" data-toggle="dropdown" href="#" onclick="opentab(event, 'Work')"> Work <span class="caret"></span></a>
           <ul class="dropdown-menu">
-           	<li><a href="#" class="tablinks" id="dpcss" onclick="opentab(event, 'IR')">Investment Research</a></li>
+           	<li><a href="#" id="clickable" class="tablinks" id="dpcss" onclick="opentab(event, 'IR')">Investment Research</a></li>
             <li class="divider"></li>
             <li><a href="#">Business Development</a></li>
           </ul>
         </li>
-        <li><a href="#" class="tablinks" onclick="opentab(event, 'Contact'); toggle();">Contact</a></li>
+        <li><a href="#" id="clickable" class="tablinks" onclick="opentab(event, 'Contact'); toggle();">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -1506,6 +1521,20 @@ function showSlides2() {
             
         </div> <!-- end Investment Research tab -->
 
+        <div id="Education">
+            
+        </div> <!-- end Education tab -->
+        
+        <div id="Analytics">
+        
+        
+        </div> <!-- end Analytics tab -->
+        
+        <div id="Strategies">
+        
+        
+        </div> <!-- end Strategies tab -->
+        
         <div id="Contact" class="tabcontent">
             <div id="contactbg">
                 <img src="./contact.jpg" alt="contact">    
