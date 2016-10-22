@@ -11,7 +11,7 @@ index.html
 - Work page and Contact page is built.
 - Designed to be a single page application.
 - Implemented responsiveness and mobile friendly.
-- Technologies Used: HTML5, CSS3, JavaScript, jQuery, Bootstrap, Google Maps, 
+- Technologies Used: HTML5, CSS3, JavaScript, jQuery, Bootstrap, Google Maps
 
 ---
 
