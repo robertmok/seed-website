@@ -2,6 +2,8 @@
 
 Trying to replicate http://www.seedsustainable.com/ using only HTML, CSS, Javascript and jQuery.
 
+Designed to be a single page application.
+
 
 Old Link: http://info504546.wixsite.com/seedtest
 
