@@ -1,6 +1,6 @@
 # seed-website
 
-Trying to replicate http://www.seedsustainable.com/ using only HTML, CSS, Javascript and jQuery.
+Trying to replicate http://www.seedsustainable.com/ using only HTML5, CSS3, Javascript and jQuery.
 
 Designed to be a single page application.
 
