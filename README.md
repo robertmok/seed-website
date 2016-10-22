@@ -1,6 +1,8 @@
 # seed-website
 
-Replicating http://www.seedsustainable.com/  <del> Old Link(Expired): http://info504546.wixsite.com/seedtest </del>
+Replicating http://www.seedsustainable.com/  
+
+<del> Old website link(Expired): http://info504546.wixsite.com/seedtest </del>
 
 ##Live Demo: https://robertmok.github.io/seed-website/
 
